@@ -66,8 +66,8 @@ function diferentInTime(date) {
   console.log(dateNow);
   console.log(dateNow.getTime());
   console.log(date.getTime());
-  date.getTime() - dateNow.getTime();
-
+  const diferentInTime = date.getTime() - dateNow.getTime();
+  return diferentInTime;
   //   if (sub <= 0) {
   //     return true;
   //   } else {
@@ -81,14 +81,14 @@ function onInputClick(e) {
   console.log('выбираю дату');
 }
 
-// function onButtonStartClick(e) {
-//   console.log('посчитаем время');
-//   convertMs();
-//   console.log(convertMs());
-//   timerID = setInterval(() => {
-//     convertMs();
-//   }, 1000);
-// }
+function onButtonStartClick(e) {
+  console.log('посчитаем время');
+  // convertMs(diferentInTime);
+  // console.log(convertMs(diferentInTime));
+  // timerID = setInterval(() => {
+  //   convertMs();
+  // }, 1000);
+}
 
 function convertMs(ms) {
   // Number of milliseconds per unit of time
