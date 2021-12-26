@@ -8,10 +8,10 @@ import Notiflix from 'notiflix';
 
 // one by one
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { Report } from 'notiflix/build/notiflix-report-aio';
-import { Confirm } from 'notiflix/build/notiflix-confirm-aio';
-import { Loading } from 'notiflix/build/notiflix-loading-aio';
-import { Block } from 'notiflix/build/notiflix-block-aio';
+// import { Report } from 'notiflix/build/notiflix-report-aio';
+// import { Confirm } from 'notiflix/build/notiflix-confirm-aio';
+// import { Loading } from 'notiflix/build/notiflix-loading-aio';
+// import { Block } from 'notiflix/build/notiflix-block-aio';
 
 // ====нашла ссылки на элементы флрмы ввода даты и полей вывода дней, часов, минут, секунд===============
 const refs = {
@@ -57,7 +57,8 @@ flatpickr('#datetime-picker', {
     console.log(diferentInTime);
     if (diferentInTime <= 0) {
       //   console.log('Please choose a date in the future');
-      alert('Please choose a date in the future');
+      Notiflix.Notify.warning('Please choose a date in the future');
+      // alert('Please choose a date in the future');
     } else {
       // ======после ввода валидной даты  кнопка старт становиться неактивной(удаляем ей атрибут дизейбл).
       refs.input.style.backgroundColor = 'aqua';
