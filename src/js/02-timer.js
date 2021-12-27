@@ -1,11 +1,11 @@
+// добавляю библиотеку флетпикр
 // Описан в документации
 import flatpickr from 'flatpickr';
 // Дополнительный импорт стилей
 import 'flatpickr/dist/flatpickr.min.css';
-
+// добавляю библиотеку нотифликс
 // all modules
 import Notiflix from 'notiflix';
-
 // one by one
 import { Notify } from 'notiflix/build/notiflix-notify-aio';
 // import { Report } from 'notiflix/build/notiflix-report-aio';
@@ -27,7 +27,6 @@ const refs = {
   input: document.querySelector('#datetime-picker'),
 };
 refs.timerEl.style.display = 'flex';
-
 refs.input.addEventListener('click', onInputClick);
 refs.buttonStartEl.addEventListener('click', onButtonStartClick);
 // ======кнопка старт вначале неактивна(добавляем ей атрибут дизейбл со значением тру)
@@ -37,9 +36,7 @@ function onInputClick(e) {
   // console.log(e.target.Date);
   console.log('выбираю дату');
 }
-
 // console.log(selectedDate.getTime());
-
 let selectedDate;
 // ======== использую библиотеку flatpickr  при клике на инпут - открывает календарь для выбора даты
 flatpickr('#datetime-picker', {
@@ -67,7 +64,6 @@ flatpickr('#datetime-picker', {
     }
   },
 });
-
 // ========функция обработки события клик на инпуте для выбора даты  =============
 function onButtonStartClick(e) {
   console.log('посчитаем время');

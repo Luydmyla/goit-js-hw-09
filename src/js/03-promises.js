@@ -8,7 +8,6 @@ const refs = {
 };
 // console.log(refs.form);
 // console.log(refs.submit);
-
 // ============вешаю слушателей событий на форму и на кнопку
 refs.form.addEventListener('input', onFormInput);
 refs.submit.addEventListener('click', onSubmitClick);
